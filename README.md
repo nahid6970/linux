@@ -6,30 +6,31 @@ Personal Linux configuration files and setup scripts.
 
 ```
 .
-├── config/          # Dotfiles (~/.config/*)
+├── config/                  # Dotfiles (~/.config/*)
+│   ├── bashrc               # Bash config
+│   ├── autostart.sh         # Autostart script
 │   └── .config/
-│       ├── hypr/    # Hyprland
-│       ├── nvim/    # Neovim
-│       ├── kitty/   # Kitty terminal
-│       ├── waybar/  # Waybar
-│       ├── tmux/    # Tmux
-│       ├── starship/# Starship prompt
-│       ├── qtile/   # Qtile WM
-│       ├── i3/      # i3 WM
-│       ├── rofi/    # Rofi launcher
-│       ├── dunst/   # Notifications
+│       ├── hypr/            # Hyprland
+│       ├── nvim/            # Neovim
+│       ├── neovim/          # Neovim standalone configs
+│       ├── emacs/           # Emacs configs
+│       ├── yazi/            # Yazi file manager
+│       ├── kitty/           # Kitty terminal
+│       ├── waybar/          # Waybar
+│       ├── tmux/            # Tmux
+│       ├── starship/        # Starship prompt
+│       ├── qtile/           # Qtile WM
+│       ├── i3/              # i3 WM
+│       ├── rofi/            # Rofi launcher
+│       ├── dunst/           # Notifications
 │       └── ...
-├── editors/         # Editor configs
-│   ├── neovim/      # Neovim standalone configs
-│   ├── emacs/       # Emacs configs
-│   └── yazi/        # Yazi file manager
-├── WSL/             # WSL/Ubuntu setup scripts
-├── script_source/   # Utility shell scripts
-├── import/          # Misc setup scripts (wallpaper, sddm, etc.)
-├── os.sh            # Main Arch setup script
-├── os_organized.sh  # Organized version of os.sh
-├── start.sh         # Entry point
-└── menu.py          # Interactive setup menu
+├── scripts/                 # All scripts
+│   ├── setup/               # Main setup scripts (os.sh, start.sh, menu.py, ...)
+│   ├── utils/               # Utility shell scripts
+│   └── import/              # Misc import scripts (wallpaper, sddm, ...)
+├── WSL/                     # WSL/Ubuntu setup scripts
+├── docs/                    # Documentation (linux.org, archinstall.org)
+└── README.md
 ```
 
 ## Setup
@@ -59,9 +60,9 @@ source ~/.bashrc
 ### Run setup script
 
 ```bash
-bash start.sh
+bash scripts/setup/start.sh
 # or for interactive menu:
-python menu.py
+python scripts/setup/menu.py
 ```
 
 ### WSL / Ubuntu
